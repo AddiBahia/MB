@@ -1,0 +1,401 @@
+/*
+ * Please see the included README.md file for license terms and conditions.
+ */
+
+
+/* This file is completely optional and not required. */
+/* Note the reference that includes it in the index.html file. */
+
+
+/* Disable certain interactions on touch devices */
+/* SOURCE: https://github.com/ftlabs/fastclick/blob/master/examples/input.html */
+/* LICENSE: https://github.com/ftlabs/fastclick/blob/master/LICENSE */
+body {
+    -webkit-touch-callout: none ;
+    -webkit-text-size-adjust: none ; -ms-text-size-adjust: none ;
+    -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ; user-select: none ;
+    -webkit-highlight: none ;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) ;
+    -webkit-tap-highlight-color: transparent ;      /* For some Androids */
+}
+
+/* Recommended for Windows 8 Phone */
+/* SOURCE: http://www.excellentwebworld.com/common-problems-solution-for-windows-phone-8-phonegap */
+html {
+    -ms-touch-action: pan-x ;
+}
+
+/* Recommended for Windows 8 Phone */
+/* SOURCE: http://www.excellentwebworld.com/common-problems-solution-for-windows-phone-8-phonegap */
+body {
+    -ms-touch-action: pan-y ;
+    -ms-content-zooming: none ;
+}
+
+/* allow copy-paste */
+input, textarea  {
+    -webkit-user-select: text ; -moz-user-select: text ; -ms-user-select: text ; user-select: text ;
+}
+
+body {
+    /* margin: 0.5rem ; */
+    background: white ;
+    color: black ;
+}
+
+
+#mainFooter1, #mainFooter2, #mainFooter3,
+#loginFooter1, #loginFooter2, #loginFooter3,
+#startFooter1, #startFooter2, #startFooter3, 
+#fazerpedidoFooter1, #fazerpedidoFooter2, #fazerpedidoFooter3,
+#contatoFooter1, #contatoFooter2, #contatoFooter3,
+#CategoriasFooter1, #CategoriasFooter2, #CategoriasFooter3,
+#produtosFooter1, #produtosFooter2, #produtosFooter3,
+#produtoDetalheFooter1, #produtoDetalheFooter2, #produtoDetalheFooter3,
+#pedidosFooter1, #pedidosFooter2, #pedidosFooter3,
+#pedidosDetalheFooter1, #pedidosDetalheFooter2, #pedidosDetalheFooter3,
+#MidiaSocialFooter1, #MidiaSocialFooter2, #MidiaSocialFooter3,
+#FacebookFooter1, #FacebookFooter2, #FacebookFooter3,
+#LancamentosFooter1, #LancamentosFooter2, #LancamentosFooter3,
+#DownloadFooter1, #DownloadFooter2, #DownloadFooter3,
+#SobreFooter1, #SobreFooter2, #SobreFooter3,
+#testFooter1, #testFooter2, #testFooter3 {
+    background-color    : #666666; 
+    color               : #FFFFFF;
+    width               : 33.3333%; 
+}
+
+
+#mainpage, #login, #start, #fazerpedido, #contato, #categorias, #produtos, #produtodetail, 
+#pedidos, #pedidosdetail, #midiasocial, #facebook, #lancamento, #download, #sobre {
+    background: url('../images/appBackground.jpg'); 
+    background-position: left top; 
+    background-repeat: no-repeat;  
+    background-size: cover;
+}
+
+
+#StartBtn1, #StartBtn2, #StartBtn3, #StartBtn4 {
+    width: 90%;
+    margin-left: 5%;
+}
+
+#startHeader, #contatoHeader, #produtosHeader, #produtodetailHeader, #pedidosHeader, #pedidodetalheHeader {
+    background-color:#333333; 
+    color: #FFFFFF;
+}
+
+
+#test {
+    background: url('../images/appBackground.jpg'); 
+    background-position: left top; 
+    background-repeat: no-repeat;  
+    background-size: cover;
+}
+
+
+/*================================= pedidos ==============================================*/
+#pedidosFooter1, #pedidosFooter2, #pedidosFooter3 {
+    background-color:#666666; 
+    color: #FFFFFF;
+    width:33.3333%; 
+}
+
+
+/*=========================================================================================*/
+    #TotalScreen {
+        //background-color: #888888; 
+        background: url(../images/appBackground.jpg); 
+        background-position: left top; 
+        background-repeat: repeat;
+        position:relative; 
+        height:100%; 
+        width:100%;        
+    }
+
+    #ScreenSection1 {  /* HEADER */
+        position:absolute; 
+        top:0%;  
+        height:6%; 
+        width:100%; 
+        text-align:center; 
+        background-color:#333333; 
+    }
+    #ScreenSection2 {
+        position:absolute; 
+        top:6%; 
+        height:80%; 
+        width:100%; 
+        //background-color: #339911;
+    }
+    #ScreenSection3 {  /* FOOTER */
+        position:absolute; 
+        top:86%; 
+        height:14%; 
+        width:100%; 
+        //background-color: #888888;
+    }
+
+    .footerIcons {
+        width:15%; 
+        margin-top:10px;
+    }
+
+    .headerIcons {
+        width:100%; 
+        margin-top:1px;
+    }
+
+    /* ======== mainscreen */
+    #FooterBtn1Mainscreen {
+        background-color:#444444; 
+        color: #FFFFFF;
+        position: absolute;
+        //height:8%; 
+        width:33.333%; 
+        bottom: 0%;
+        left: 0%;
+        top:0%;
+    }
+    #FooterBtn2Mainscreen {
+        background-color:#444444; 
+        color: #FFFFFF;
+        position: absolute;
+        //height:10%; 
+        width:33.333%; 
+        bottom: 0%;
+        left:33.3333%;
+        top:0%;
+    }
+    #FooterBtn3Mainscreen {
+        background-color:#444444; 
+        color: #FFFFFF;
+        position: absolute;
+        //height:10%; 
+        width:33.333%; 
+        bottom: 0%;
+        left:66.6666%;
+        top:0%;
+    }
+
+    /* ========= Login ============ */
+    #FooterBtn1Login {
+        background-color:#444444; 
+        color: #FFFFFF;
+        position: absolute;
+        //height:8%; 
+        width:33.333%; 
+        bottom: 0%;
+        left: 0%;
+        top:0%;
+    }
+    #FooterBtn2Login {
+        background-color:#444444; 
+        color: #FFFFFF;
+        position: absolute;
+        //height:8%; 
+        width:33.333%; 
+        bottom: 0%;
+        left: 33.3333%;
+        top:0%;
+    }
+    #FooterBtn3Login {
+        background-color:#444444; 
+        color: #FFFFFF;
+        position: absolute;
+        //height:8%; 
+        width:33.333%; 
+        bottom: 0%;
+        left: 66.6666%;
+        top:0%;
+    }
+
+    /* ========= Start ============ */
+    #FooterBtn1Start {
+        background-color:#444444; 
+        color: #FFFFFF;
+        position: absolute;
+        //height:8%; 
+        width:33.333%; 
+        bottom: 0%;
+        left: 0%;
+        top:0%;
+    }
+    #FooterBtn2Start {
+        background-color:#444444; 
+        color: #FFFFFF;
+        position: absolute;
+        //height:8%; 
+        width:33.333%; 
+        bottom: 0%;
+        left: 33.3333%;
+        top:0%;
+    }
+    #FooterBtn3Start {
+        background-color:#444444; 
+        color: #FFFFFF;
+        position: absolute;
+        //height:8%; 
+        width:33.333%; 
+        bottom: 0%;
+        left: 66.6666%;
+        top:0%;
+    }
+
+    /* ========= Contato ============ */
+    #FooterBtn1Contato {
+        background-color:#444444; 
+        color: #FFFFFF;
+        position: absolute;
+        //height:8%; 
+        width:33.333%; 
+        bottom: 0%;
+        left: 0%;
+        top:0%;
+    }
+    #FooterBtn2Contato {
+        background-color:#444444; 
+        color: #FFFFFF;
+        position: absolute;
+        //height:8%; 
+        width:33.333%; 
+        bottom: 0%;
+        left: 33.3333%;
+        top:0%;
+    }
+    #FooterBtn3Contato {
+        background-color:#444444; 
+        color: #FFFFFF;
+        position: absolute;
+        //height:8%; 
+        width:33.333%; 
+        bottom: 0%;
+        left: 66.6666%;
+        top:0%;
+    }
+
+
+/* ======================== accordeon =============================== */
+    .main:before {
+        width:             100%;
+        height:            100%;
+        position:          absolute;
+        top:               0px;
+        left:              0px;
+        z-index:           -1;
+        content:           '';
+    /*
+	background:-webkit-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+	background:-moz-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+	background:-o-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+	background:radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+    */
+        background-color: transparent;
+    }
+
+    .site-header-wrap {
+        margin-bottom:     60px;
+        border-bottom:     1px solid #cd9ad6;
+    }
+
+    /*----- Accordion -----*/
+    .accordion, .accordion * {
+        -webkit-box-sizing:    border-box; 
+        -moz-box-sizing:       border-box; 
+        box-sizing:            border-box;
+    }
+
+    .accordion {
+        overflow:          hidden;
+border-radius:     0px;
+        background:        #EAEAEA;
+    }
+
+    /*----- Section Titles -----*/
+/*
+    .accordion-section-title {
+//        width:             100%;
+//        padding:           0px;
+//        display:           inline-block;
+//        background:        #DDDDDD;
+        transition:        all linear 0.15s;
+//        font-size:         1.200em;
+//        color:             #333333;
+//        border-radius:     3px;
+    }
+
+    .accordion-section-title.active, .accordion-section-title:hover {
+        background:        #AAAAAA;
+        text-decoration:   none;
+        color:             #E0E0E0;
+    }
+
+ //   .accordion-section:last-child .accordion-section-title {
+ //       border-bottom:     none;
+ //   }
+*/
+    /*----- Section Content -----*/
+    .accordion-section-content {
+        padding:           0px;
+        display:           none;
+    }
+
+/*
+    #accord1, #accord2 
+    {
+//        padding-top:       5px;
+//        padding-bottom:    5px;
+        padding-top:       0px;
+        padding-bottom:    0px;
+    }
+*/
+/* ==================================================================== */
+
+    .mainpageClass {
+        margin-top      : 10px; 
+        padding-top     : 10px; 
+        padding-bottom  : 10px; 
+        width           : 100%; 
+        //margin-left:5%; 
+        font-size       : 0.9em; 
+        text-align      : center;
+        background-color: #F0F0F0; 
+        color           : #333333;
+        text-decoration : none;
+    }
+    
+    .mainpageClass:hover {
+        background-color: #CCCCBB;
+        text-decoration: none;
+    }    
+    a:hover {
+        text-decoration: none;
+    }
+
+
+
+    .LancamentoImage {
+        width           : 100%;
+        margin-left     : 0%;
+        height          : auto;
+        margin-bottom   : 1px;
+        border          : 1px solid transparent;
+    }
+
+    .MSocialClass {
+        width           : 60%; 
+        margin-left     : 20%;
+        padding-top     : 10px;
+        padding-bottom  : 10px;
+    }
+
+
+
+
+/* ---------------- fonts ------------------------- */
+@font-face {
+  font-family: 'Oswald DemiBold';
+  src: url("fonts/oswald-demibold-webfont.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Abel Regular';
+  src: url("fonts/Abel-Regular.ttf"); }

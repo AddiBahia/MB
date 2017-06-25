@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <meta charset="UTF-8">
+        <title>Mairibel</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+<!--        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>-->
+<!-- 20170624  -->
+<script src="js/jquery-3.2.1.js"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+
+        <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
+        <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+        <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+     </head>
+
+    <body>
+         
+        <div class="upage" id="mainpage">
+            <div class="upage-outer">
+            
+            <table style="width:100%; position:relative; margin-top:0; padding-top:0;">
+                <tr>
+                    <td style="width:100%; text-align:center; position:absolute; left:0%; background-color:#333333; ">
+                        <h4 style="margin-top:0; padding-top:10px; color:#333333; paddin-left:0px; padding-right:0px;">Main</h4>
+                    </td>
+                    <td style="width:10%; text-align:center; position:absolute; left:0%; top:10px; background-color:#333333; ">
+                       <img src="images/list-view-512.png" id="mainHeader" style="width:50%; margin-left:25%;" />
+                    </td>
+                </tr>
+            </table>
+            <div><img src="images/list-view-512.png" id="XmainHeader" style="width:50%; height:0px; margin-left:25%; margin-bottom:0px; padding-top:30px;" /></div>
+ 
+                <!--
+                <div class="widget uib_w_2 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <img src="images/logotipo.png" style="width:50%; margin-left:25%; margin-top:30px;">
+                </div>
+                -->
+                <div class="widget uib_w_2 scale-image" data-uib="media/img" data-ver="0">
+                    <img src="http://mairibel.com.br/app/images/news/1.jpg" style="width:96%; margin-left:2%; padding-top:3.0em;">
+                </div>        
+
+                <div class="row" style="margin-top:2.0em;">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+<!--                        <a href="#"><p class="mainpageClass" id="mainpageLoginBtn">Login</p></a>-->
+                        <a href="#">
+                            <p id="mainpageLoginBtn">
+<!--                                <img src="http://mairibel.com.br/app/images/icons/MBButtonsLogin.png" style="width:100%; height:auto;" >-->
+<img src="images/icons/MBButtonsLogin.png" style="width:100%; height:10%;" >
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                </div>
+                
+                <div style="height:0.1em;"></div>
+                                              
+                <table style="margin-top: 30px; width:100%;">
+                    <tr>
+                        <td id="mainpageContactBtn">    
+<!--                            <a href="#"><img src="http://mairibel.com.br/app/images/icons/MBButtonsContato.png" style="width:100%; height:auto;" ></a>-->
+                            <a href="#"><img src="images/icons/MBButtonsContato.png" style="width:70%; height:auto; margin-left:15%;" ></a>
+                        </td>
+                        <td id="mainpageMidiaSocialBtn">
+<!--                            <a href="#"><img src="http://mairibel.com.br/app/images/icons/MBButtonsMidia.png" style="width:100%; height:auto;" ></a>-->
+                            <a href="#"><img src="images/icons/MBButtonsMidia.png" style="width:70%; height:auto; margin-left:15%;" ></a>
+                        </td>                        
+                        <td id="mainpageLancamentoBtn"> 
+<!--                            <a href="#"><img src="http://mairibel.com.br/app/images/icons/MBButtonsLancamentos.png" style="width:100%; height:auto;" ></a>-->
+                            <a href="#"><img src="images/icons/MBButtonsLancamentos.png" style="width:70%; height:auto; margin-left:15%;" ></a>
+                        </td>
+                        <td id="mainpageDownloadBtn">   
+<!--                            <a href="#"><img src="http://mairibel.com.br/app/images/icons/MBButtonsDownloads.png" style="width:100%; height:auto;" ></a>-->
+                            <a href="#"><img src="images/icons/MBButtonsDownloads.png" style="width:70%; height:auto; margin-left:15%;" ></a>
+                        </td>
+                    </tr>
+                </table>
+
+
+                <div style="height:50px;"></div>
+
+                <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':250, 'side':'left', 'dur':200}" id="LSMmain">
+                    <div class="sidebar-content content-area vertical-col">
+                        <button class="btn widget uib_w_4 d-margins btn-lg btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="LSMMainFechar">Fechar</button>
+                        <div class="list-group widget uib_w_5 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
+                            <a class="list-group-item allow-badge widget uib_w_6" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoFazerPedido">
+                                <h4 class="list-group-item-heading">Fazer o pedido</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_7" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMeusPedidos">
+                                <h4 class="list-group-item-heading">Meus pedidos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoContato">
+                                <h4 class="list-group-item-heading">Contato</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMidia">
+                                <h4 class="list-group-item-heading">Mídia</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoLancamentos">
+                                <h4 class="list-group-item-heading">Lançamentos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoDownloads">
+                                <h4 class="list-group-item-heading">Downloads</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoSobre">
+                                <h4 class="list-group-item-heading">Sobre</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element" data-uib="layout/footer" data-ver="0">
+                    <button class="btn widget" id="mainFooter1"><img src="images/arrow-112-512.png"   class="footerIcons"></button>
+                    <div id="mainFooter2"></div>
+                    <button class="btn widget" id="mainFooter3"><img src="images/home-5-512.png"      class="footerIcons"></button>
+                </div>
+            </div>
+                 
+        </div> <!-- mainpage -->
+
+        <div class="upage hidden" id="login">            
+                <table style="width:100%; position:relative; margin-top:0; padding-top:0;">
+                    <tr>
+                        <td style="width:100%; text-align:center; position:absolute; left:0%; background-color:#333333; ">
+                            <h4 style="margin-top:0; padding-top:10px; color:#F0F0F0;">Login</h4>
+                        </td>
+                        <td style="width:10%; text-align:center; position:absolute; left:0%; top:10px; background-color:#333333; ">
+                           <img src="images/list-view-512.png"  id="loginHeader" style="width:50%; margin-left:25%;" />
+                        </td>
+                    </tr>
+                </table>
+
+                <div style="margin-top:9.0em;"></div>
+
+                <div>
+                    <div class="row" style="margin-top:5%;">
+                        <input class="wide-control form-control default" id="loginNomeID" style="width:40%; margin-left:30%; height:50px; font-size:1.5em;" type="text" placeholder="Seu código">
+                        <input class="wide-control form-control default" id="loginSenhaID" style="width:40%; margin-left:30%; margin-top:10px; height:50px; font-size:1.5em;" type="password" placeholder="Sua senha">
+                        <a href="#">
+                            <p id="loginLoginBtn">
+<!--                                <img src="http://mairibel.com.br/app/images/icons/MBButtonsLogin.png" style="width:30%; margin-left:35%; height:auto; margin-top:20px;" >-->
+                                <img src="images/icons/MBButtonsLogin.png" style="width:50%; margin-left:25%; height:auto; margin-top:20px;" >
+                            </p>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="widget" style="height:70px;"></div>
+
+                <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':250, 'side':'left', 'dur':200}" id="LSMlogin">
+                    <div class="sidebar-content content-area vertical-col">
+                        <button class="btn widget uib_w_4 d-margins btn-lg btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="LSMLoginFechar">Fechar</button>
+                        <div class="list-group widget uib_w_5 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
+                            <a class="list-group-item allow-badge widget uib_w_6" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoFazerPedido">
+                                <h4 class="list-group-item-heading">Fazer o pedido</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_7" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMeusPedidos">
+                                <h4 class="list-group-item-heading">Meus pedidos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoContato">
+                                <h4 class="list-group-item-heading">Contato</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMidia">
+                                <h4 class="list-group-item-heading">Mídia</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoLancamentos">
+                                <h4 class="list-group-item-heading">Lançamentos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoDownloads">
+                                <h4 class="list-group-item-heading">Downloads</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoSobre">
+                                <h4 class="list-group-item-heading">Sobre</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element" data-uib="layout/footer" data-ver="0">
+                    <button class="btn widget" id="loginFooter1"><img src="images/arrow-112-512.png"   class="footerIcons"></button>
+                    <div id="loginFooter2"></div>
+                    <button class="btn widget" id="loginFooter3"><img src="images/home-5-512.png"      class="footerIcons"></button>
+                </div>
+            
+        </div>
+
+        <div class="upage hidden" id="start">
+            <div class="upage-outer">
+                <table style="width:100%; position:relative;">
+                    <tr>
+                        <td style="width:100%; text-align:center; position:absolute; left:0%; background-color:#333333; ">
+                            <h4 style="margin-top:0; padding-top:10px; color:#F0F0F0;">Start</h4>
+                        </td>
+                        <td style="width:10%; text-align:center; position:absolute; left:0%; top:10px; background-color:#333333; ">
+                           <img src="images/list-view-512.png"  id="startHeader" style="width:50%; margin-left:25%;" />
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+                <div class="row" style="margin-top:70px;">
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <img src="images/icons/LogoMairibel.png" style="width:100%; height:5.0em;" >
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                </div>
+                    
+                <div class="row" style="margin-top:80px;">
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <div class="row">
+                            <a href="#">
+                                <p id="StartFazerPedido">
+<!--                                    <img src="http://mairibel.com.br/app/images/icons/MBButtonsFazerPedido.png" style="width:60%; margin-left:20%; height:5.0em;" >-->
+                                    <img src="images/icons/MBButtonsFazerPedido.png" style="width:60%; margin-left:20%; height:3.0em;" >
+                                </p>
+                            </a>
+                        </div>
+                        <div class="row" style="margin-top:1.0em;">
+                            <a href="#">
+                                <p id="StartMeusPedidos">
+<!--                                    <img src="http://mairibel.com.br/app/images/icons/MBButtonsMeusPedidos.png" style="width:60%; margin-left:20%; height:5.0em;" >-->
+                                    <img src="images/icons/MBButtonsMeusPedidos.png" style="width:60%; margin-left:20%; height:3.0em;" >
+                                </p>
+                            </a>
+                        </div>    
+                        <br>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                </div>
+                
+                <div class="row" style="margin-top:80px;">
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <img src="images/icons/LogoHidratycollor.png" style="width:100%; height:5.0em;" >
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                </div>
+                
+                <div class="upage-content">
+                    <div class="widget" style="height:70px;">
+                    </div>
+                </div>
+
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element" data-uib="layout/footer" data-ver="0">
+                    <button class="btn widget" id="startFooter1"><img src="images/arrow-112-512.png"   class="footerIcons"></button>
+                    <div id="startFooter2"></div>
+                    <button class="btn widget" id="startFooter3"><img src="images/home-5-512.png"      class="footerIcons"></button>
+                </div>
+                
+                <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':250, 'side':'left', 'dur':200}" id="LSMstart">
+                    <div class="sidebar-content content-area vertical-col">
+                        <button class="btn widget uib_w_4 d-margins btn-lg btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="LSMStartFechar">Fechar</button>
+                        <div class="list-group widget uib_w_5 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
+                            <a class="list-group-item allow-badge widget uib_w_6" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoFazerPedido">
+                                <h4 class="list-group-item-heading">Fazer o pedido</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_7" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMeusPedidos">
+                                <h4 class="list-group-item-heading">Meus pedidos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoContato">
+                                <h4 class="list-group-item-heading">Contato</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMidia">
+                                <h4 class="list-group-item-heading">Mídia</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoLancamentos">
+                                <h4 class="list-group-item-heading">Lançamentos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoDownloads">
+                                <h4 class="list-group-item-heading">Downloads</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoSobre">
+                                <h4 class="list-group-item-heading">Sobre</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="upage hidden" id="fazerpedido">
+
+<!--
+01. Kit Alisamento com Amônia:                  itens: cod 984 - 1037 - 1814-  1696
+02. Kit Cauterização Capilar:                   Itens cod: 072 - 071 - 075 - 073 - 055
+03. Kit Permanente Afro:                        Itens Cod: 1696 - 1684 - 1685 - 1686
+04. Kit Relaxamento de Guanidina Grande:        Itens cod: 088 - 519 - 815 - 092 - 457 - 1001
+05. Kit Relaxamento Guanidina Pequeno:          Itens Cod: 088 - 454 - 452 - 1128 - 090 - 092
+06. Kit Reposição de Aminoacido e Nutrientes:   Itens Cod: 1029 - 1031 - 1030
+07. kit tratamento de choque:                   ítens cod: 885 - 886 - 887
+08. Kit Selante Gold Mairi LIss:                ítens cod: 1232 - 1815 - 1778
+09. Kit Selante Gold Matizador:                 Itens Cod: 1232 - 1233 - 1778
+-->
+      
+            <div class="upage-outer">
+                <table style="width:100%; position:relative;">
+                    <tr>
+                        <td style="width:100%; text-align:center; position:absolute; left:0%; background-color:#333333; ">
+                            <h4 style="margin-top:0; padding-top:10px; color:#F0F0F0;">Fazer pedido</h4>
+                        </td>
+                        <td style="width:10%; text-align:center; position:absolute; left:0%; top:10px; background-color:#333333; ">
+                           <img src="images/list-view-512.png"  id="fazerPedidoHeader" style="width:50%; margin-left:25%;" />
+                        </td>
+                    </tr>
+                </table>
+                
+                <div style="height: 50px;"></div>
+                
+ <!--               <div class="upage-content">-->                
+          <!--          <div class="container" style="margin-top:0%; width:100%; height:auto; background-color: transparent; padding:0; margin:0;">-->
+                   <!--   <div class="main">-->
+                      	<div class="accordion" style="background-color:transparent;">
+                      		<div class="accordion-section">
+<!--                      			<a class="accordion-section-title" id="accord1" href="#accordion-1" align="center" style="height:50px; font-size:1.5em; text-decoration: none;">-->
+
+
+<style>
+#accord1 {
+  background-image: url(images/icons/FazerPedidoMairibel.jpg);
+background-size: 100% 100%;
+  display: block;
+  text-indent: -9999px;
+}
+#accord2 {
+  background-image: url(images/icons/FazerPedidoHidratycollor.jpg);
+background-size: 100% 100%;
+  display: block;
+  text-indent: -9999px;
+}
+</style>
+                                
+                      			<a class="accordion-section-title" id="accord1" href="#accordion-1">
+                                    <img src="images/icons/FazerPedidoMairibel.jpg" />
+                                </a>
+                      			<div id="accordion-1" class="accordion-section-content">
+                      			  <div id="acc1"></div>
+                      			</div>
+                      		</div>
+                            <div style="height: 10px;"></div>
+                      		<div class="accordion-section">
+                      			<a class="accordion-section-title" id="accord2" href="#accordion-2">
+                                    <img src="images/icons/FazerPedidoHidratycollor.jpg" />
+                                </a>
+                      			<div id="accordion-2" class="accordion-section-content">
+                      			  <div id="acc2"></div>
+                      			</div>
+                      		</div>
+                      	</div>
+                <!--      </div>-->
+                 <!--   </div>-->
+<!--                </div>-->
+                <br>
+                <div>
+                    <form class = "bs-example bs-example-form" role = "form">
+                        <div class = "row">
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <input type = "text" class = "form-control" placeholder="Código" id="inputCodigo" style="width:100%; margin-top:0.8em;">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <a href="#" id="fazerpedidoEscolher">
+<!--                                            <img src="http://mairibel.com.br/app/images/icons/MBButtonsEscolhe.png" style="width:90%; margin-left:0%;" >-->
+                                            <img src="images/icons/MBButtonsEscolhe.png" style="width:90%; margin-left:0%;" >
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                        </div>
+                    </form>
+                </div>  
+                
+                <br>
+                <div class = "row">
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="height:300px; width:96%; margin-left:2%; background-color:#F0F0F0; color:#333333;">
+                        <div class="upage-content">
+                            <div id="currentProducts" style="height:100%; width:100%; overflow: scroll;"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                </div>
+
+                <br>
+                <div class = "row">
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <div style="background-color:#EAEAEA; width:80%; margin-left:10%; font-family:Oswald; font-size:1.2em; opacity:0.8; text-align:center;" id="currentValorTotal"></div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                </div>
+
+                <br>
+                <div class = "row">
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <div id="PedirTempor"></div>
+                        <a href="#">
+                            <p id="fazerpedidoPedir">
+<!--                                <img src="http://mairibel.com.br/app/images/icons/MBButtonsPedir.png" style="width:60%; margin-left:20%; height:5.0em;" >-->
+                                <img src="images/icons/MBButtonsPedir.png" style="width:60%; margin-left:20%; height:5.0em;" >
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                </div>
+                
+                <div class="widget" style="height:70px;"></div>
+
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element" data-uib="layout/footer" data-ver="0">
+                    <button class="btn widget" id="fazerpedidoFooter1"><img src="images/arrow-112-512.png"   class="footerIcons"></button>
+                    <div id="fazerpedidoFooter2"></div>
+                    <button class="btn widget" id="fazerpedidoFooter3"><img src="images/home-5-512.png"      class="footerIcons"></button>
+                </div>
+
+                <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':250, 'side':'left', 'dur':200}" id="LSMfazerpedido">
+                    <div class="sidebar-content content-area vertical-col">
+                        <button class="btn widget uib_w_4 d-margins btn-lg btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="LSMFazerPedidoFechar">Fechar</button>
+                        <div class="list-group widget uib_w_5 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
+                            <a class="list-group-item allow-badge widget uib_w_6" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoFazerPedido">
+                                <h4 class="list-group-item-heading">Fazer o pedido</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_7" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMeusPedidos">
+                                <h4 class="list-group-item-heading">Meus pedidos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoContato">
+                                <h4 class="list-group-item-heading">Contato</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMidia">
+                                <h4 class="list-group-item-heading">Mídia</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoLancamentos">
+                                <h4 class="list-group-item-heading">Lançamentos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoDownloads">
+                                <h4 class="list-group-item-heading">Downloads</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoSobre">
+                                <h4 class="list-group-item-heading">Sobre</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- fazer pedido -->
+
+        <div class="modal fade" id="modalProduto" role="dialog" style="width:98%; margin-left:1%;">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="ModalProdutosDetalhe"></div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- modal screen product detail -->
+
+        <div class="upage hidden" id="contato" style="height:100%;">
+            <div class="upage-outer">
+                <table style="width:100%; position:relative;">
+                    <tr>
+                        <td style="width:100%; text-align:center; position:absolute; left:0%; background-color:#333333; ">
+                            <h4 style="margin-top:0; padding-top:10px; color:#F0F0F0;">Contato</h4>
+                        </td>
+                        <td style="width:10%; text-align:center; position:absolute; left:0%; top:10px; background-color:#333333; ">
+                           <img src="images/list-view-512.png"  id="contatoHeader" style="width:50%; margin-left:25%;" />
+                        </td>
+                    </tr>
+                </table>
+
+                <div style="margin-top:100px;"></div>
+                
+                <div class="upage-content">
+                    <form id="ajax-contact" method="post" action="">
+                            <div class="form-group"  style="margin:13px 0 0 0;">
+                                <div class="input-group" style="width:80%; margin-left:10%;">
+                                    <input type="text" class="form-control" name="inputNome" id="inputNome" autofocus placeholder="*Nome" title="" required />
+                                </div>
+                            </div>
+                            <div class="form-group"  style="margin:10px 0 0 0;">
+                                <div class="input-group" style="width:80%; margin-left:10%;">
+                                    <input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="*Email" required>
+                                </div>
+                            </div>	
+                            <div class="form-group"  style="margin:10px 0 0 0;">
+                                <div class="input-group" style="width:80%; margin-left:10%;">
+                                    <input type="text" class="form-control" name="inputAssunto" id="inputAssunto" placeholder="*Assunto" required>
+                                </div>
+                            </div>	
+                            <div class="form-group"  style="margin:10px 0 0 0;">
+                                <div class="input-group" style="width:80%; margin-left:10%;">
+                                    <input type="tel" class="form-control" name="inputTelefone" id="inputTelefone" placeholder="Telefone">
+                                </div>
+                            </div>
+                            <div class="form-group"  style="margin:10px 0 0 0;">
+                                <div class="input-group" style="width:80%; margin-left:10%;">
+                                    <textarea class="form-control"  name="inputMensagem" id="inputMensagem"  rows="8" cols="40" placeholder="*Mensagem" required></textarea>
+                                </div>
+                            </div>  
+                            <div class="form-group"  style="margin:20px 0 5px 0;">
+<!--
+                                <a href="#">
+                                    <p id="ScreenContactSend" style="width:60%; margin-left:20%; height:50px; font-size:1.5em; padding-top:10px; text-align:center; background-color:#E0E0E0;">Enviar</p>
+                                </a>
+-->
+                                
+                        <a href="#">
+                            <p id="ScreenContactSend">
+                                <!--<img src="http://mairibel.com.br/app/images/icons/MBButtonsEnviar.png" style="width:30%; margin-left:35%; height:auto;" >-->
+                                <img src="images/icons/MBButtonsEnviar.png" style="width:30%; margin-left:35%; height:auto;" >
+                            </p>
+                        </a>
+
+                                
+                            </div>
+                    </form>
+
+<div id="form-messages"></div>
+
+<!--
+                    <div class="row" style="margin-top:30%;">
+                        <input class="wide-control form-control default" id="InputNome" style="width:60%; margin-left:20%;" type="text" placeholder="Nome">
+                        <input class="wide-control form-control default" id="InputAssunto" style="width:60%; margin-left:20%; margin-top:20px;" type="text" placeholder="Assunto">
+                        <input class="wide-control form-control default" id="InputMensagem" style="width:60%; margin-left:20%; margin-top:20px;" type="text" placeholder="Mensagem">
+                        <a href="#"><p class="mainpageClass" id="ScreenContactSend" style="margin-top:10%; width:30%;margin-left:35%; margin-top:20px;">Enviar</p></a>
+                    </div>
+-->
+                </div>
+
+                <div class="upage-content">
+                    <div class="widget" style="height:70px;">
+                    </div>
+                </div>
+                
+                <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':250, 'side':'left', 'dur':200}" id="LSMcontato">
+                    <div class="sidebar-content content-area vertical-col">
+                        <button class="btn widget uib_w_4 d-margins btn-lg btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="LSMContatoFechar">Fechar</button>
+                        <div class="list-group widget uib_w_5 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
+                            <a class="list-group-item allow-badge widget uib_w_6" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoFazerPedido">
+                                <h4 class="list-group-item-heading">Fazer o pedido</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_7" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMeusPedidos">
+                                <h4 class="list-group-item-heading">Meus pedidos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoContato">
+                                <h4 class="list-group-item-heading">Contato</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMidia">
+                                <h4 class="list-group-item-heading">Mídia</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoLancamentos">
+                                <h4 class="list-group-item-heading">Lançamentos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoDownloads">
+                                <h4 class="list-group-item-heading">Downloads</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoSobre">
+                                <h4 class="list-group-item-heading">Sobre</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element" data-uib="layout/footer" data-ver="0">
+                    <button class="btn widget" id="contatoFooter1"><img src="images/arrow-112-512.png"   class="footerIcons"></button>
+                    <div id="contatoFooter2"></div>
+                    <button class="btn widget" id="contatoFooter3"><img src="images/home-5-512.png"      class="footerIcons"></button>
+                </div>
+
+            </div>
+        </div>  <!-- contato -->
+
+        <div class="upage hidden" id="produtos">
+            <div class="upage-outer">
+                <table style="width:100%; position:relative;">
+                    <tr>
+                        <td style="width:100%; text-align:center; position:absolute; left:0%; background-color:#333333; ">
+                            <h4 style="margin-top:0; padding-top:10px; color:#F0F0F0;">Produtos</h4>
+                        </td>
+                        <td style="width:10%; text-align:center; position:absolute; left:0%; top:10px; background-color:#333333; ">
+                           <img src="images/list-view-512.png"  id="produtosHeader" style="width:50%; margin-left:25%;" />
+                        </td>
+                    </tr>
+                </table>
+                
+                <div class="upage-content">
+                    <div id="testField"></div>
+                </div>
+
+                <div class="upage-content">
+                    <div class="widget" style="height:70px;">
+                    </div>
+                </div>
+
+                <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':250, 'side':'left', 'dur':200}" id="LSMprodutos">
+                    <div class="sidebar-content content-area vertical-col">
+                        <button class="btn widget uib_w_4 d-margins btn-lg btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="LSMProdutosFechar">Fechar</button>
+                        <div class="list-group widget uib_w_5 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
+                            <a class="list-group-item allow-badge widget uib_w_6" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoFazerPedido">
+                                <h4 class="list-group-item-heading">Fazer o pedido</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_7" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMeusPedidos">
+                                <h4 class="list-group-item-heading">Meus pedidos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoContato">
+                                <h4 class="list-group-item-heading">Contato</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMidia">
+                                <h4 class="list-group-item-heading">Mídia</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoLancamentos">
+                                <h4 class="list-group-item-heading">Lançamentos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoDownloads">
+                                <h4 class="list-group-item-heading">Downloads</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoSobre">
+                                <h4 class="list-group-item-heading">Sobre</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element" data-uib="layout/footer" data-ver="0">
+                    <button class="btn widget" id="produtosFooter1"><img src="images/arrow-112-512.png"   class="footerIcons"></button>
+                    <div id="produtosFooter2"></div>
+                    <button class="btn widget" id="produtosFooter3"><img src="images/home-5-512.png"      class="footerIcons"></button>
+                </div>
+
+            </div>
+        </div> <!-- produtos -->
+
+        <div class="upage hidden" id="produtodetail">
+            <div class="upage-outer">
+                <table style="width:100%; position:relative;">
+                    <tr>
+                        <td style="width:100%; text-align:center; position:absolute; left:0%; background-color:#333333; ">
+                            <h4 style="margin-top:0; padding-top:10px; color:#F0F0F0;">Produtos por pedido</h4>
+                        </td>
+                        <td style="width:10%; text-align:center; position:absolute; left:0%; top:10px; background-color:#333333; ">
+                           <img src="images/list-view-512.png"  id="produtoPorPedidoHeader" style="width:50%; margin-left:25%;" />
+                        </td>
+                    </tr>
+                </table>
+
+                <div id="testProdutoDetail"></div>
+
+                <div class="widget" style="height:70px;"></div>
+
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element" data-uib="layout/footer" data-ver="0">
+                    <button class="btn widget" id="produtoDetalheFooter1"><img src="images/arrow-112-512.png"   class="footerIcons"></button>
+                    <div id="produtoDetalheFooter2"></div>
+                    <button class="btn widget" id="produtoDetalheFooter3"><img src="images/home-5-512.png"      class="footerIcons"></button>
+                </div>
+
+            </div>
+        </div> <!-- produto detalhe  -->
+
+        <div class="upage hidden" id="pedidos">
+            <div class="upage-outer">
+                <table style="width:100%; position:relative;">
+                    <tr>
+                        <td style="width:100%; text-align:center; position:absolute; left:0%; background-color:#333333; ">
+                            <h4 style="margin-top:0; padding-top:10px; color:#F0F0F0;">Pedidos</h4>
+                        </td>
+                        <td style="width:10%; text-align:center; position:absolute; left:0%; top:10px; background-color:#333333; ">
+                           <img src="images/list-view-512.png"  id="pedidosXXXHeader" style="width:50%; margin-left:25%;" />
+                        </td>
+                    </tr>
+                </table>
+
+                <div id="displayTabPd1"></div>
+
+                <div class="widget" style="height:70px;"></div>
+
+                <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':250, 'side':'left', 'dur':200}" id="LSMpedidos">
+                    <div class="sidebar-content content-area vertical-col">
+                        <button class="btn widget uib_w_4 d-margins btn-lg btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="LSMPedidosFechar">Fechar</button>
+                        <div class="list-group widget uib_w_5 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
+                            <a class="list-group-item allow-badge widget uib_w_6" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoFazerPedido">
+                                <h4 class="list-group-item-heading">Fazer o pedido</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_7" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMeusPedidos">
+                                <h4 class="list-group-item-heading">Meus pedidos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoContato">
+                                <h4 class="list-group-item-heading">Contato</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMidia">
+                                <h4 class="list-group-item-heading">Mídia</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoLancamentos">
+                                <h4 class="list-group-item-heading">Lançamentos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoDownloads">
+                                <h4 class="list-group-item-heading">Downloads</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoSobre">
+                                <h4 class="list-group-item-heading">Sobre</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element" data-uib="layout/footer" data-ver="0">
+                    <button class="btn widget" id="pedidosFooter1"><img src="images/arrow-112-512.png"   class="footerIcons"></button>
+                    <div id="pedidosFooter2"></div>
+                    <button class="btn widget" id="pedidosFooter3"><img src="images/home-5-512.png"      class="footerIcons"></button>
+                </div>
+
+            </div>
+        </div> <!-- pedidos -->
+
+        <div class="upage hidden" id="pedidosdetail">
+            <div class="upage-outer">
+                <table style="width:100%; position:relative;">
+                    <tr>
+                        <td style="width:100%; text-align:center; position:absolute; left:0%; background-color:#333333; ">
+                            <h4 style="margin-top:0; padding-top:10px; color:#F0F0F0;">Produtos por pedido</h4>
+                        </td>
+                        <td style="width:10%; text-align:center; position:absolute; left:0%; top:10px; background-color:#333333; ">
+                           <img src="images/list-view-512.png"  id="produtoPorPedidoHeader" style="width:50%; margin-left:25%;" />
+                        </td>
+                    </tr>
+                </table>
+                
+                <div id="displayPedidosDetalhe"></div>
+
+                <div class="widget" style="height:10px;"></div>
+                
+                <div class="row">
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <div class="row" style="background-color: #f0f0f0; padding-left:0px; padding-right:0px;">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <h4 style="margin-top:0; padding-top:10px; color:#333333; font-size:1.0em;">Pedido chegou ?</h4>        
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-top:2%;">
+                                <form>
+                                <label class="radio-inline">
+                                    <input name="radioGroup1" id="pedidochegou1" value="sim" type="radio">Sim
+                                </label>
+                                <label class="radio-inline">
+                                    <input name="radioGroup1" id="pedidochegou1" value="não" checked="" type="radio">Não
+                                </label>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row" style="background-color: #f0f0f0; padding-left:0px; padding-right:0px;">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <h4 style="margin-top:0; padding-top:10px; color:#333333; font-size:1.0em;">Está OK ?</h4>        
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-top:2%;">
+                                <form>
+                                <label class="radio-inline">
+                                    <input name="radioGroup2" id="pedidook1" value="sim" type="radio">Sim
+                                </label>
+                                <label class="radio-inline">
+                                    <input name="radioGroup2" id="pedidook2" value="não" checked="" type="radio">Não
+                                </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+                </div>
+                
+                <div class="widget" style="height:10px;"></div>
+                
+                <div class="row" style="margin-left:1%; margin-right:1%;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="comment" placeholder="Commentário ..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#">
+                    <p id="PedidosCommentSend">
+<!--                        <img src="http://mairibel.com.br/app/images/icons/MBButtonsConfirme.png" style="width:40%; margin-left:30%; height:5.0em;" >-->
+                        <img src="images/icons/MBButtonsConfirme.png" style="width:40%; margin-left:30%; height:5.0em;" >
+                    </p>
+                </a>
+
+                <div id="pedidos-messages"></div>
+                
+                <div class="widget" style="height:40px;"></div>
+                
+                <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':250, 'side':'left', 'dur':200}" id="LSMpedidosdetail">
+                    <div class="sidebar-content content-area vertical-col">
+                        <button class="btn widget uib_w_4 d-margins btn-lg btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="LSMPedidosDetailFechar">Fechar</button>
+                        <div class="list-group widget uib_w_5 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
+                            <a class="list-group-item allow-badge widget uib_w_6" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoFazerPedido">
+                                <h4 class="list-group-item-heading">Fazer o pedido</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_7" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMeusPedidos">
+                                <h4 class="list-group-item-heading">Meus pedidos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoContato">
+                                <h4 class="list-group-item-heading">Contato</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMidia">
+                                <h4 class="list-group-item-heading">Mídia</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoLancamentos">
+                                <h4 class="list-group-item-heading">Lançamentos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoDownloads">
+                                <h4 class="list-group-item-heading">Downloads</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoSobre">
+                                <h4 class="list-group-item-heading">Sobre</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element" data-uib="layout/footer" data-ver="0">
+                    <button class="btn widget" id="pedidosDetalheFooter1"><img src="images/arrow-112-512.png"   class="footerIcons"></button>
+                    <div id="pedidosDetalheFooter2"></div>
+                    <button class="btn widget" id="pedidosDetalheFooter3"><img src="images/home-5-512.png"      class="footerIcons"></button>
+                </div>
+                
+            </div>
+        </div> <!-- pedidos detalhe -->
+
+        <div class="upage hidden" id="midiasocial">
+            <div class="upage-outer">
+                <table style="width:100%; position:relative;">
+                    <tr>
+                        <td style="width:100%; text-align:center; position:absolute; left:0%; background-color:#333333; ">
+                            <h4 style="margin-top:0; padding-top:10px; color:#F0F0F0;">Mídia social</h4>
+                        </td>
+                        <td style="width:10%; text-align:center; position:absolute; left:0%; top:10px; background-color:#333333; ">
+                           <img src="images/list-view-512.png"  id="MidiaSocialHeader" style="width:50%; margin-left:25%;" />
+                        </td>
+                    </tr>
+                </table>
+   
+                <div class="upage-content">
+                        <div class="row" style="margin-top:50px; width:94%; margin-left:3%;">
+                            <div class="col-sm-6 col-xs-6" style="padding:0; margin:0;">
+                                <a href="#">
+<!--                                    <img src="http://mairibel.com.br/app/images/icons/facebook.png" id="SocialMidiafacebookBtn"  class="MSocialClass">-->
+                                    <img src="images/icons/facebook.png" id="SocialMidiafacebookBtn"  class="MSocialClass">
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-xs-6" style="padding:0; margin:0;">
+                                <a href="#">
+<!--                                    <img src="http://mairibel.com.br/app/images/icons/youtube.png" id="SocialMidiaYoutubeBtn"  class="MSocialClass">-->
+                                    <img src="images/icons/youtube.png" id="SocialMidiaYoutubeBtn"  class="MSocialClass">
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-xs-6" style="padding:0; margin:0;">
+                                <a href="#">
+<!--                                    <img src="http://mairibel.com.br/app/images/icons/instagram.png" id="SocialMidiaInstagramBtn"  class="MSocialClass">-->
+                                    <img src="images/icons/instagram.png" id="SocialMidiaInstagramBtn"  class="MSocialClass">
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-xs-6" style="padding:0; margin:0;">
+                                <a href="#">
+<!--                                    <img src="http://mairibel.com.br/app/images/icons/twitter.png" id="SocialMidiaInstagramBtn"  class="MSocialClass">-->
+                                    <img src="images/icons/twitter.png" id="SocialMidiaInstagramBtn"  class="MSocialClass">
+                                </a>
+                            </div>
+                        </div>
+                </div>
+                
+                <div class="row" style="margin-top:30px;"></div>
+
+                <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':250, 'side':'left', 'dur':200}" id="LSMmidiasocial">
+                    <div class="sidebar-content content-area vertical-col">
+                        <button class="btn widget uib_w_4 d-margins btn-lg btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="LSMMidiasocialFechar">Fechar</button>
+                        <div class="list-group widget uib_w_5 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
+                            <a class="list-group-item allow-badge widget uib_w_6" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoFazerPedido">
+                                <h4 class="list-group-item-heading">Fazer o pedido</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_7" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMeusPedidos">
+                                <h4 class="list-group-item-heading">Meus pedidos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoContato">
+                                <h4 class="list-group-item-heading">Contato</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMidia">
+                                <h4 class="list-group-item-heading">Mídia</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoLancamentos">
+                                <h4 class="list-group-item-heading">Lançamentos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoDownloads">
+                                <h4 class="list-group-item-heading">Downloads</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoSobre">
+                                <h4 class="list-group-item-heading">Sobre</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element" data-uib="layout/footer" data-ver="0">
+                    <button class="btn widget" id="MidiaSocialFooter1"><img src="images/arrow-112-512.png"   class="footerIcons"></button>
+                    <div id="MidiaSocialFooter2"></div>
+                    <button class="btn widget" id="MidiaSocialFooter3"><img src="images/home-5-512.png"      class="footerIcons"></button>
+                </div>
+
+            </div>
+        </div> <!-- mídia social -->        
+
+        <div class="upage hidden" id="facebook" style="height:100%;">
+            <div class="upage-outer">
+                <table style="width:100%; position:relative;">
+                    <tr>
+                        <td style="width:100%; text-align:center; position:absolute; left:0%; background-color:#333333; ">
+                            <h4 style="margin-top:0; padding-top:10px; color:#F0F0F0;">Facebook</h4>
+                        </td>
+                        <td style="width:10%; text-align:center; position:absolute; left:0%; top:10px; background-color:#333333; ">
+                           <img src="images/list-view-512.png"  id="FacebookHeader" style="width:50%; margin-left:25%;" />
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- 
+                <div class="row" style="background-color: #333333; color:#FFFFFF;">
+                    <h4 style="margin-top:0; padding-top:10px; text-align:center;">Facebook</h4>
+                </div>-->
+            
+            <div style="height:30px;"></div>
+                
+<!--                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMairibelCosmeticos%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+-->
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMairibelCosmeticos%2F&tabs=timeline&width=680&height=1000&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="680" height="1000" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+                <!-- footer -->
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element uib_w_1" data-uib="layout/footer" data-ver="0">
+                    <button class="btn widget" id="FacebookFooter1"><img src="images/arrow-112-512.png" class="footerIcons"></button>
+                    <button class="btn widget" id="FacebookFooter2"><img src="images/text-file-6-512.png" class="footerIcons"></button>
+                    <button class="btn widget" id="FacebookFooter3"><img src="images/home-5-512.png" class="footerIcons"></button>
+                </div>
+            </div>
+        </div> <!-- facebook -->
+ 
+        <div class="upage hidden" id="lancamento">
+            <div class="upage-outer">
+                <table style="width:100%; position:relative;">
+                    <tr>
+                        <td style="width:100%; text-align:center; position:absolute; left:0%; background-color:#333333; ">
+                            <h4 style="margin-top:0; padding-top:10px; color:#F0F0F0;">Lançamentos</h4>
+                        </td>
+                        <td style="width:10%; text-align:center; position:absolute; left:0%; top:10px; background-color:#333333; ">
+                           <img src="images/list-view-512.png"  id="LancamentosHeader" style="width:50%; margin-left:25%;" />
+                        </td>
+                    </tr>
+                </table>
+                
+                <div class="upage-content">
+                    <div class="widget">
+                        <div id="displayLancamento" style="margin-top:50px; width:98%; margin-left:1%;"></div>
+                    </div>
+                </div>
+
+
+                <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':250, 'side':'left', 'dur':200}" id="LSMlancamento">
+                    <div class="sidebar-content content-area vertical-col">
+                        <button class="btn widget uib_w_4 d-margins btn-lg btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="LSMLancamentoFechar">Fechar</button>
+                        <div class="list-group widget uib_w_5 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
+                            <a class="list-group-item allow-badge widget uib_w_6" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoFazerPedido">
+                                <h4 class="list-group-item-heading">Fazer o pedido</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_7" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMeusPedidos">
+                                <h4 class="list-group-item-heading">Meus pedidos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoContato">
+                                <h4 class="list-group-item-heading">Contato</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMidia">
+                                <h4 class="list-group-item-heading">Mídia</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoLancamentos">
+                                <h4 class="list-group-item-heading">Lançamentos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoDownloads">
+                                <h4 class="list-group-item-heading">Downloads</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoSobre">
+                                <h4 class="list-group-item-heading">Sobre</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element" data-uib="layout/footer" data-ver="0">
+                    <button class="btn widget" id="LancamentosFooter1"><img src="images/arrow-112-512.png"   class="footerIcons"></button>
+                    <div id="LancamentosFooter2"></div>
+                    <button class="btn widget" id="LancamentosFooter3"><img src="images/home-5-512.png"      class="footerIcons"></button>
+                </div>
+                
+            </div>
+        </div> <!-- lancamento -->
+
+        <div class="upage hidden" id="download">
+            <div class="upage-outer">
+                <table style="width:100%; position:relative;">
+                    <tr>
+                        <td style="width:100%; text-align:center; position:absolute; left:0%; background-color:#333333; ">
+                            <h4 style="margin-top:0; padding-top:10px; color:#F0F0F0;">Downloads</h4>
+                        </td>
+                        <td style="width:10%; text-align:center; position:absolute; left:0%; top:10px; background-color:#333333; ">
+                           <img src="images/list-view-512.png"  id="DownloadsHeader" style="width:50%; margin-left:25%;" />
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="upage-content">
+                    <div class="widget">
+                        <div id="displayDownloads" style="margin-top:50px; width:98%; margin-left:1%;"></div>
+                    </div>
+                </div>
+
+                <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':250, 'side':'left', 'dur':200}" id="LSMdownload">
+                    <div class="sidebar-content content-area vertical-col">
+                        <button class="btn widget uib_w_4 d-margins btn-lg btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="LSMDownloadFechar">Fechar</button>
+                        <div class="list-group widget uib_w_5 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
+                            <a class="list-group-item allow-badge widget uib_w_6" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoFazerPedido">
+                                <h4 class="list-group-item-heading">Fazer o pedido</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_7" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMeusPedidos">
+                                <h4 class="list-group-item-heading">Meus pedidos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoContato">
+                                <h4 class="list-group-item-heading">Contato</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMidia">
+                                <h4 class="list-group-item-heading">Mídia</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoLancamentos">
+                                <h4 class="list-group-item-heading">Lançamentos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoDownloads">
+                                <h4 class="list-group-item-heading">Downloads</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoSobre">
+                                <h4 class="list-group-item-heading">Sobre</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element" data-uib="layout/footer" data-ver="0">
+                    <button class="btn widget" id="DownloadFooter1"><img src="images/arrow-112-512.png"   class="footerIcons"></button>
+                    <div id="DownloadFooter2"></div>
+                    <button class="btn widget" id="DownloadFooter3"><img src="images/home-5-512.png"      class="footerIcons"></button>
+                </div>
+            </div>
+        </div> <!-- download -->   
+
+        <div id="modalImage" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="ModalImage"></div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- modal screen show picture -->
+      
+        <div id="modalError" class="modal fade" role="dialog" style="width:80%; margin-left:10%;">
+            <div class="modal-dialog" style="margin-top:20%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" align="center">Erro</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="ModalError" align="center"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <div align="center">
+                            <button id="modalErrorButtonClose" type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+
+        <div class="upage hidden" id="sobre">
+            <div class="upage-outer">
+                <table style="width:100%; position:relative;">
+                    <tr>
+                        <td style="width:100%; text-align:center; position:absolute; left:0%; background-color:#333333; ">
+                            <h4 style="margin-top:0; padding-top:10px; color:#F0F0F0;">Sobre</h4>
+                        </td>
+                        <td style="width:10%; text-align:center; position:absolute; left:0%; top:10px; background-color:#333333; ">
+                           <img src="images/list-view-512.png"  id="sobreHeader" style="width:50%; margin-left:25%;" />
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="upage-content">
+                    <div align="center">
+                        <h3 style="margin-top:20%; text-align:center;">Mairibel Cosméticos</h3>
+                        <h4>Fone: +55 (19) 3827-3335 | 3877-1974</h4>
+                        <h4>Email: atendimento@mairibel.com.br</h4>
+                        <h4></h4>
+                    </div>
+                    <h5 style="color:#FFFFFF; margin-top:50px; margin-left:25%;">Version: 0.002 2017 (25.06.2017)</h5>
+                </div>
+
+                <div class="inner-element uib_w_3 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':250, 'side':'left', 'dur':200}" id="LSMsobre">
+                    <div class="sidebar-content content-area vertical-col">
+                        <button class="btn widget uib_w_4 d-margins btn-lg btn-info" data-uib="twitter%20bootstrap/button" data-ver="1" id="LSMSobreFechar">Fechar</button>
+                        <div class="list-group widget uib_w_5 d-margins" data-uib="twitter%20bootstrap/list_group" data-ver="1">
+                            <a class="list-group-item allow-badge widget uib_w_6" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoFazerPedido">
+                                <h4 class="list-group-item-heading">Fazer o pedido</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_7" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMeusPedidos">
+                                <h4 class="list-group-item-heading">Meus pedidos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoContato">
+                                <h4 class="list-group-item-heading">Contato</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_9 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoMidia">
+                                <h4 class="list-group-item-heading">Mídia</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoLancamentos">
+                                <h4 class="list-group-item-heading">Lançamentos</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_11 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoDownloads">
+                                <h4 class="list-group-item-heading">Downloads</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                            <a class="list-group-item allow-badge widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/list_item" data-ver="1" href="#" id="LSMgotoSobre">
+                                <h4 class="list-group-item-heading">Sobre</h4>
+                                <p class="list-group-item-text"></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element" data-uib="layout/footer" data-ver="0">
+                    <button class="btn widget" id="SobreFooter1"><img src="images/arrow-112-512.png"   class="footerIcons"></button>
+                    <div id="SobreFooter2"></div>
+                    <button class="btn widget" id="SobreFooter3"><img src="images/home-5-512.png"      class="footerIcons"></button>
+                </div>
+            </div>
+        </div> <!-- sobre --> 
+        
+        <div id="globalRevendedorID" style=" visibility: hidden;">rev</div>
+        
+        <!-- ************************************************************************************************ -->
+
+    </body>
+
+</html>
