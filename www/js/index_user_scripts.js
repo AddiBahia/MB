@@ -14,7 +14,6 @@
      
     var loggedIn    = 0;
    
-     
     function showErrorModal(data) {
         $("#ModalError").html(data);
         $('#modalError').modal('show');     
@@ -418,7 +417,7 @@
         function callInsertPedido(data) {
             
             var revendedor  = $("#globalRevendedorID").text();
-            
+  
 // --> send pedido - email ..
 /*
 $.ajax({
@@ -437,7 +436,6 @@ showErrorModal (data);
 function displaySendPedidoEmail(data) {
     ;
 }
-//-----------------------
 */
         
             // get 'produtos' for current 'pedido' ...        
